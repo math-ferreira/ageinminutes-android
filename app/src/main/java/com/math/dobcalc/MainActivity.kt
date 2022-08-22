@@ -1,14 +1,11 @@
 package com.math.dobcalc
 
 import android.app.DatePickerDialog
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.view.isVisible
+import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -16,7 +13,6 @@ class MainActivity : AppCompatActivity() {
 
     private var tvSelectedDate: TextView? = null
     private var tvAgeInMinutes: TextView? = null
-    private var imgMaysa: ImageView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,8 +21,6 @@ class MainActivity : AppCompatActivity() {
         val btnDatePicker: Button = findViewById(R.id.btnDatePicker)
         tvSelectedDate = findViewById(R.id.tvSelectedDate)
         tvAgeInMinutes = findViewById(R.id.tvAgeInMinutes)
-        imgMaysa =  findViewById(R.id.imgMaysa)
-        imgMaysa!!.visibility = View.INVISIBLE
 
         btnDatePicker.setOnClickListener {
             clickDatePicker()
@@ -70,9 +64,6 @@ class MainActivity : AppCompatActivity() {
                         val differenceInMinutes = currentDateInMinutes - selectedDateInMinutes
 
                         tvAgeInMinutes?.text = differenceInMinutes.toString()
-
-                        val imgMaysa: ImageView = findViewById(R.id.imgMaysa)
-                        imgMaysa.visibility = View.VISIBLE
                     }
 
                 }

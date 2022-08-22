@@ -93,12 +93,4 @@
         android:textStyle="bold"
         />
 
-    <ImageView
-        android:id="@+id/imgMaysa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/maysa" />
-
-
 </LinearLayout>
